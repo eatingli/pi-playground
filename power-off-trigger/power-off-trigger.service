@@ -1,0 +1,14 @@
+
+[Unit]
+Description=Power Off Trigger
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/home/pi/power-off-trigger.py
+User=pi
+WorkingDirectory=/home/pi
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
