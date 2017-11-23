@@ -5,9 +5,9 @@ After=multi-user.target
 
 [Service]
 Type=simple
-ExecStart=/home/pi/power-off-trigger.py
+ExecStart=/etc/power-off-trigger.py --trig 10 --period 5 --gpio-pin 23
 User=pi
-WorkingDirectory=/home/pi
+WorkingDirectory=/etc
 Restart=always
 
 [Install]
